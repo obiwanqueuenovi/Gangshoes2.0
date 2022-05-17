@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    {%load static%} <!-- para cargar python-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- bostrap -->
+     {% block titulo %}
+     {% endblock titulo %}
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
+     <link rel="stylesheet" href="{% static 'ventas/css/estilos.css' %}" type="text/css"> <!-- css instalar-->
+</head>
+<body class="fondo">
+
+    <div class="container separacion_superior">
+        <div class="row">
+            {% block nombre %}
+            {% endblock nombre %}
+        </div>
+        <div class="row">
+        <div class="col-md-6">
+            {% block imagen %}
+            {% endblock imagen %}
+        </div>
+        <div class="col-md-6">
+            {% block parrafo %}
+            {% endblock parrafo %}
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>

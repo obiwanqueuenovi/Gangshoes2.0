@@ -1,0 +1,27 @@
+{% extends 'Ventas/plantillaMascota.html' %} <!-- enlazar plantilla-->
+    {%load static%} <!-- para cargar python-->
+
+    {% block titulo %}  <!-- bloque codigo de plantilla se usa para transferir datos de la plantilla -->
+    <title>{{nombreM}}</title> <!--anidamos info con codigo de  contexto en views-->
+    {% if nombreM == "ayudante de santa"%}
+    <p>el gaete es wekereke </p>
+    {% endif %}
+    {% endblock titulo %}
+
+               
+
+    {% block nombre %}     
+
+            <h1> {{nombreM}}</h1>
+            {% endblock nombre %}
+       
+
+            {% block imagen %}
+            <img src={{imagenM}} alt="sin foto" class="imagen">
+            {% endblock imagen %}
+
+            {% block parrafo %}
+            <p>nombre: {{nombreM}}</p>
+            <p>edad:  {{edadM}}</p>
+            <p>color de pelo:{{colorP}}</p>
+            {% endblock parrafo %}
